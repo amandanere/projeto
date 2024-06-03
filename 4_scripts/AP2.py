@@ -23,7 +23,7 @@ option = st.selectbox(
 #engine = sqa.create_engine("sqlite:///taxas.db", echo=True)
 #comn = engine.connect()
 #dados = pd.read_sql('taxas.db', con=comn)
-#df = pd.DataFrame(dados)
+df = pd.DataFrame(dados)
 #st.dataframe(df)
 
 tx = st.select_slider(
