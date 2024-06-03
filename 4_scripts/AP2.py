@@ -4,14 +4,21 @@ import streamlit as st
 import numpy as np
 import plotly.express as px
 from PIL import Image
+import os
 
-#logo = Image.open('matei.png')  # Substitua 'caminho/para/sua/logo.png' pelo caminho correto para sua imagem
-st.image('matei.png', caption='')
-col1, col2, col3 = st.columns([10, 50, 10])
+#image_path = "matei.png"
+
+#if os.path.exists(image_path):
+#    st.image(image_path, caption='')
+#else:
+#    st.error(f'O arquivo {image_path} não foi encontrado.')
+
+#st.image('matei.png', caption='')
+#col1, col2, col3 = st.columns([10, 50, 10])
 
 
 st.write('***Taxa de Homicídio Intencional***')
-dados = pd.read_csv("C:/Users/2302323/Documents/AP2/0_bases_originais/dados_originais_taxa_de_homicídio_intencional.csv", sep=";", encoding='utf-8')
+dados = pd.read_csv("C:/Users/T-Gamer/Desktop/AP2/0_bases_originais/dados_originais_taxa_de_homicídio_intencional.csv", sep=";", encoding='utf-8')
 
 option = st.selectbox(
    "Selecione a opção:",
