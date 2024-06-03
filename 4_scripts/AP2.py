@@ -11,8 +11,7 @@ import os
 
 
 st.write('***Taxa de Homicídio Intencional***')
-dados = pd.read_csv("C:/dados_tratadas_taxa_de_homicídio_intencional.csv", sep=";", encoding='utf-8')
-
+dados = pd.read_csv("C:/Users/T-Gamer/Desktop/AP2/1_bases_tratadas/dados_tratadas_taxa_de_homicídio_intencional.csv", sep=";", encoding='utf-8')
 option = st.selectbox(
    "Selecione a opção:",
    ("Base Analítica", "Relatórios"),
