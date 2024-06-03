@@ -6,15 +6,8 @@ import plotly.express as px
 from PIL import Image
 import os
 
-#image_path = "matei.png"
-
-#if os.path.exists(image_path):
-#    st.image(image_path, caption='')
-#else:
-#    st.error(f'O arquivo {image_path} não foi encontrado.')
-
-#st.image('matei.png', caption='')
-#col1, col2, col3 = st.columns([10, 50, 10])
+st.image('matei.png', caption='')
+col1, col2, col3 = st.columns([10, 50, 10])
 
 
 st.write('***Taxa de Homicídio Intencional***')
