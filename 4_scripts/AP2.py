@@ -12,22 +12,19 @@ from PIL import Image
 
 st.write('***Taxa de Homicídio Intencional***')
 
-
-engine = sqa.create_engine("sqlite:///taxas.db", echo=True)
-comn = engine.connect()
-dados = pd.read_sql('SELECT * FROM taxas', con=comn)
-df = pd.DataFrame(dados)
-
-
-
-
-#dados = pd.read_csv("C:/Users/T-Gamer/Desktop/AP2/1_bases_tratadas/dados_tratadas_taxa_de_homicídio_intencional.csv", sep=";", encoding='utf-8')
+dados = pd.read_csv("C:/Users/T-Gamer/Desktop/AP2/1_bases_tratadas/dados_tratadas_taxa_de_homicídio_intencional.csv", sep=";", encoding='utf-8')
 option = st.selectbox(
    "Selecione a opção:",
    ("Base Analítica", "Relatórios"),
    index=None,
    placeholder="",
    )
+
+engine = sqa.create_engine("sqlite:///taxas.db", echo=True)
+comn = engine.connect()
+dados = pd.read_sql('taxas.db', con=comn)
+df = pd.DataFrame(dados)
+#st.dataframe(df)
 
 tx = st.select_slider(
     "Selecione a taxa",
