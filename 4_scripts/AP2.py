@@ -6,8 +6,7 @@ import plotly.express as px
 from PIL import Image
 
 
-#st.image('matei.png', caption='')
-#col1, col2, col3 = st.columns([10, 50, 10])
+st.logo('4_scripts/matei.png')
 
 
 st.write('***Taxa de Homicídio Intencional***')
